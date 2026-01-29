@@ -1,3 +1,16 @@
 name: github-readme-stats
 region: us-east-1
 yamlVersion: 2
+backend:
+  path: .
+  language:
+    name: js
+    packageManager: npm
+  functions:
+    - name: app
+      path: .
+      entry: express.js
+      type: httpServer
+  scripts:
+    deploy: npm install
+    local: npm install
